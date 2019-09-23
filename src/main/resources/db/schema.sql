@@ -16,3 +16,13 @@ CREATE TABLE `user` (
 ALTER TABLE `user` ADD UNIQUE (`username`);
 ALTER TABLE `user` ADD UNIQUE (`email`);
 ALTER TABLE `user` ADD UNIQUE (`phone`);
+
+
+DROP TABLE IF EXISTS `flower`;
+CREATE TABLE `flower` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `name` varchar(50) DEFAULT NULL comment '花名',
+  `yanse` varchar(50) DEFAULT NULL comment '颜色',
+  `mean` varchar(200) DEFAULT NULL comment '花语',
+  PRIMARY KEY (`id`)
+);
