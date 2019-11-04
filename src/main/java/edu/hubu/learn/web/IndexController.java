@@ -18,5 +18,11 @@ public class IndexController {
         mav.setViewName("index");
         return mav;
     }
+        @RequestMapping("/user")
+        public ModelAndView users(){
+            ModelAndView mav = new ModelAndView();
+            mav.setViewName("users");
+            return mav;
+    }
 
 }

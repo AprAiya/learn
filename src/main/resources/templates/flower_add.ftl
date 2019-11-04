@@ -22,29 +22,23 @@
     <div class="row">
       <div class="col-md-4">
         <ul class="nav nav-pills nav-stacked">
-          <li role="presentation" class="active"><a href="/flower/list">列表</a></li>
-          <li role="presentation"><a href="/flower/add">新增</a></li>
+          <li role="presentation"><a href="/flower/list">列表</a></li>
+          <li role="presentation" class="active"><a href="/flower/add">新增</a></li>
           <li role="presentation"><a href="/flower/search">搜索</a></li>
         </ul>
       </div>
       <div class="col-md-8">      
-        <table class="table table-hover">
-          <thead>
-          <th>ID</th><th>花名</th><th>颜色</th>
-         <th>头像</th><th>删除</th><th>修改</th><th>头像</th>
-         
-          </thead>
-          <tbody>
-          <#list flowers as flower>
-          <tr>
-         <td>${flower.id}</td><td>${flower.flowername}</td><td>${flower.password}</td><td>${flower.avatar}</td>
-          <td><a href="/flower/delete/${flower.id}">删除</a></td>
-          <td><a href="/flower/modify/${flower.id}">修改</a></td>
-           <td><a href="/flower/add_avatar/${flower.id}">上传</a></td>
-          </tr>
-          </#list>
-          </tbody>
-        </table>
+        <form action="/flower/do_add">
+            <div class="form-group">
+                <label for="name">花名</label>
+                <input type="text" class="form-control" id="name" name="name" placeholder="请输入花名">
+            </div>
+            <div class="form-group">
+                <label for="yanse">密码</label>
+                <input type="yanse" class="form-control" id="yanse" name="yanse" placeholder="请输入颜色">
+            </div>
+            <button type="submit" class="btn btn-default">确认</button>
+        </form>
       </div>
     </div>
   </div>
@@ -54,4 +48,4 @@
     <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
   </body>
-</html> 
+</html>

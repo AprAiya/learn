@@ -17,4 +17,10 @@ public class Flower {
     private String yanse;
 
     private String mean;
+
+    @Column(name="avatar_url")
+    private String avatar;
+
+	public void setAvatar(String fileName) {
+	}
 }

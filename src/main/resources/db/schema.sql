@@ -24,5 +24,6 @@ CREATE TABLE `flower` (
   `name` varchar(50) DEFAULT NULL comment '花名',
   `yanse` varchar(50) DEFAULT NULL comment '颜色',
   `mean` varchar(200) DEFAULT NULL comment '花语',
+  `avatar_url` varchar(200) DEFAULT '' comment '头像',
   PRIMARY KEY (`id`)
 );
